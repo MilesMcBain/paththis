@@ -1,0 +1,7 @@
+#! /bin/bash
+if [[ :$PATH: == *:$PWD:* ]] ; then
+    echo "Current working directory is already in PATH."
+else
+    echo "PATH=\"\$PATH:$PWD\"" >> ~/.profile
+    echo "Added $PWD to PATH in ~/.profile" 
+fi
